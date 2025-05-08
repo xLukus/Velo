@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div
+      class="loadingDiv flex justify-center items-center z-20 fixed top-0 w-full h-full bg-gray-700"
+    >
+      <h1 class="w-full text-center text-6xl text-white"></h1>
+    </div>
+    <img src="images/gradient.png" alt="" class="absolute right-0 z-[-1]" />
+    <canvas class="webgl"></canvas>
+
+    <!-- -----------------------------------------------------------------------------------------------------NAVBAR -->
+    <div
+      class="w-full h-[150px] m:h-[100px] mt-[30px] flex justify-center items-center"
+    >
+      <nav
+        class="w-[80%] h-full flex sm:flex-row flex-col justify-between items-center nav gap-5"
+      >
+        <section class="w-2/3">
+          <img src="images/logo.png" alt="logo" />
+        </section>
+        <section
+          class="bg-gray-950 h-[70px] rounded-[100px] items-center w-full sm:w-1/3 flex justify-end sm:justify-center"
+        >
+          <ul class="flex flex-row justify-evenly w-full text-2xl">
+            <li
+              class="cursor-pointer hover:text-[#FF6600] transition-colors duration-300"
+            >
+              Bikes
+            </li>
+            <li
+              class="cursor-pointer hover:text-[#FF6600] transition-colors duration-300"
+            >
+              About
+            </li>
+            <li
+              class="cursor-pointer hover:text-[#FF6600] transition-colors duration-300"
+            >
+              Contact
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <!-- -----------------------------------------------------------------------------------------------------HERO -->
+    <div
+      class="w-full h-full mt-[30px] flex justify-center items-center mb-[800px] sm:mb-0"
+    >
+      <img
+        src="images/7502f544-cadd-4822-b06d-aafa054019eb.png"
+        alt="rock1"
+        class="absolute right-0 top-[600px] sm:top-[500px] rock1 z-[-1]"
+      />
+
+      <div class="w-[80%] h-[300px] sm:h-[600px] flex items-center">
+        <div class="w-full sm:w-1/2 h-2/3">
+          <h1 class="text-[#FF6600] text-3xl sm:text-6xl font-bold hero-intro">
+            Experience the Future of Cycling Today
+          </h1>
+          <h2 class="mt-[50px] w-2/3 text-2xl sm:text-3xl hero-intro">
+            Discover our cutting-edge 3D bike that redefines performance and
+            style. Join the revolution in cycling technology and elevate your
+            ride.
+          </h2>
+          <div class="flex flex-row gap-20 mt-10 hero-intro">
+            <div
+              class="text-black w-[150px] h-[50px] flex text-xl justify-center text-center items-center"
+              style="
+                background: #ff6600;
+                background: linear-gradient(
+                  90deg,
+                  rgba(255, 102, 0, 1) 0%,
+                  rgba(255, 255, 255, 1) 100%
+                );
+              "
+            >
+              <p>Shop</p>
+            </div>
+            <div
+              class="w-[150px] h-[50px] flex text-center justify-center text-xl items-center border-[#ff6600] border-1 text-[#33CC33]"
+            >
+              <p>Learn More</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------------------------------------------------------------------------------Discorver -->
+    <div
+      class="w-full h-full m:mt-[330px] sm:mt-[500px] mb-[700px] sm:mb-0 flex justify-center items-center"
+    >
+      <div class="w-[80%] h-[600px] flex items-center flex-col">
+        <div class="w-full flex flex-col items-center justify-center trigger1">
+          <h4 class="text-[#33CC33] text-xl scroll1">Innovative</h4>
+          <h2
+            class="text-5xl text-[#FF6600] m-6 font-bold scroll1 text-center sm:text-left"
+          >
+            Discover the Future of Cycling
+          </h2>
+          <p class="text-xl w-1/2 text-center scroll1">
+            Experience the perfect blend of style and performance. Our bike is
+            designed for both casual riders and serious cyclists.
+          </p>
+        </div>
+        <div
+          class="w-full h-full flex flex-col sm:flex-row justify-evenly items-center"
+        >
+          <div
+            class="w-2/3 sm:w-1/3 gap-4 flex justify-center items-center flex-col scroll2"
+          >
+            <img src="images/kocka.png" alt="cubeImg" class="m-7" />
+            <h3
+              class="text-2xl sm:text-3xl h-[160px] sm:h-[120px] text-[#FF6600] text-center font-bold w-2/3"
+            >
+              Lightweight Design for Effortless Riding
+            </h3>
+            <p class="w-2/3 text-center text-l mt-[50px]">
+              Bike's lightweight frame ensures easy handling.
+            </p>
+          </div>
+          <div
+            class="w-2/3 sm:w-1/3gap-4 flex justify-center items-center flex-col scroll2"
+          >
+            <img src="images/kocka.png" alt="cubeImg" class="m-7" />
+            <h3
+              class="text-2xl sm:text-3xl h-[160px] sm:h-[120px] text-[#FF6600] text-center font-bold w-2/3"
+            >
+              Advanced Braking System for Maximum Safety
+            </h3>
+            <p class="w-2/3 text-center text-l mt-[70px]">
+              Enjoy reliable stopping power in all conditions.
+            </p>
+          </div>
+          <div
+            class="w-2/3 sm:w-1/3 gap-4 flex justify-center items-center flex-col scroll2"
+          >
+            <img src="images/kocka.png" alt="cubeImg" class="m-7" />
+            <h3
+              class="text-2xl sm:text-3xl h-[160px] sm:h-[120px] text-[#FF6600] text-center font-bold w-2/3"
+            >
+              Ergonomic Seating for Ultimate Comfort
+            </h3>
+            <p class="w-2/3 text-center text-l mt-[50px]">
+              Ride longer with our specially designed seating.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------------------------------------------------------------------------------Div images -->
+    <div class="w-full h-[200px]">
+      <img
+        src="images/9aad4060-99c2-426b-8082-d56cc7ad951b.png"
+        alt="rock2"
+        class="absolute left-0 top-[2300px] sm:top-[1200px] rock2 z-[-1]"
+      />
+      <img
+        src="images/gradient3.png"
+        alt="gradient3"
+        class="absolute left-0 top-[2500px] z-[-10]"
+      />
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------------RIDE -->
+    <div class="w-full h-full mt-[180px] flex justify-center items-center">
+      <img
+        src="images/b445a107-7e58-49aa-8e35-32ffc08384cb.png"
+        alt="rock3"
+        class="absolute right-0 top-[2900px] h-[700px] w-[500px] sm:top-[2300px] ride-img z-[-1]"
+      />
+      <div class="w-[80%] h-[900px] flex items-center ride-trigger">
+        <div class="w-full sm:w-1/3 h-2/3">
+          <h4 class="text-[#33CC33] text-xl ride">Ride</h4>
+          <h1 class="text-3xl sm:text-5xl text-[#FF6600] my-6 font-bold ride">
+            Discover the Benefits of Owning a Bike
+          </h1>
+          <h2 class="mt-[50px] w-2/3 text-2xl sm:text-3xl ride">
+            Owning a bike enhances your health by promoting regular exercise.
+            It's also a sustainable choice that reduces your carbon footprint
+            while saving you money on transportation.
+          </h2>
+          <div class="flex flex-row mt-10 ride">
+            <div>
+              <h3 class="text-[#33CC33] text-4xl font-bold">Health</h3>
+              <p>Boosts fitness and mental well-being.</p>
+            </div>
+            <div>
+              <h3 class="text-[#33CC33] text-4xl font-bold">Eco</h3>
+              <p>Contributes to a cleaner environment for everyone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------------------------------------------------------------------------------EXPIRIENCE -->
+    <div
+      class="w-full h-full mt-[220px] sm:mt-[330px] flex justify-center items-center"
+    >
+      <div
+        class="w-[80%] h-[300px] flex justify-center items-center flex-col sm:flex-row expirience-trigger"
+      >
+        <div
+          class="w-full sm:w-1/2 flex justify-center text-3xl sm:text-5xl exp"
+        >
+          <h2 class="w-2/3 text-[#FF6600] font-bold text-center">
+            Experience the Ride of Your Life
+          </h2>
+        </div>
+        <div class="w-full sm:w-1/3 exp text-center">
+          <p>
+            Don't just dream about the perfect bike—make it a reality! Schedule
+            a test ride today and feel the difference.
+          </p>
+          <div>
+            <div class="flex flex-row gap-20 mt-10">
+              <div
+                class="text-black w-[150px] h-[50px] flex text-xl justify-center text-center items-center"
+                style="
+                  background: #ff6600;
+                  background: linear-gradient(
+                    90deg,
+                    rgba(255, 102, 0, 1) 0%,
+                    rgba(255, 255, 255, 1) 100%
+                  );
+                "
+              >
+                <p>Test ride</p>
+              </div>
+              <div
+                class="w-[150px] h-[50px] flex text-center justify-center text-xl items-center border-[#ff6600] border-1 text-[#33CC33]"
+              >
+                <p>Buy now</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------------------------------------------------------------------------------SPEED -->
+    <div
+      class="w-full h-full mt-[300px] sm:mt-[180px] flex justify-center items-center"
+    >
+      <img
+        src="images/4288c5b4-60e3-447b-9661-43200a2f7a52.png"
+        alt="rock4 "
+        class="absolute left-0 top-[4100px] sm:top-[3100px] exp-rock z-[-1]"
+      />
+      <div
+        class="w-[80%] h-[500px] sm:h-[900px] flex items-center flex-row-reverse speed-trigger"
+      >
+        <div class="w-2/3 sm:1/2 h-2/3">
+          <h4 class="text-[#33CC33] text-xl speed">Speed</h4>
+          <h1 class="text-3xl sm:text-5xl text-[#FF6600] my-6 font-bold speed">
+            Unleash Your Ride with Cutting-Edge Performance
+          </h1>
+          <h2 class="mt-[50px] w-full sm:w-2/3 text-2xl sm:text-3xl speed">
+            Experience the thrill of speeds up to 30 mph. Our bike is
+            lightweight and designed for optimal performance.
+          </h2>
+          <div class="flex flex-row mt-10 speed">
+            <div>
+              <h3 class="text-[#33CC33] text-4xl font-bold">25%</h3>
+              <p>Lightweight frame for effortless handling and speed.</p>
+            </div>
+            <div>
+              <h3 class="text-[#33CC33] text-4xl font-bold">100%</h3>
+              <p>Long-lasting battery life for extended rides.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------------------------------------------------------------------------------------Footer -->
+
+    <img
+      src="images/662dcc9e-1aa8-417b-879c-fbaaeaedc789.png"
+      alt="rock4"
+      class="absolute top-[5600px] sm:top-[5000px] w-full z-[-1]"
+    />
+    <div
+      class="w-full h-full mt-[1000px] sm:mt-[980px] flex justify-center items-center"
+    >
+      <div
+        class="w-[80%] h-[600px] flex-col gap-[300px] sm:flex-row flex items-center footer-trigger"
+      >
+        <section class="w-full h-2/3 flex justify-center items-center">
+          <div>
+            <div class="w-full">
+              <img src="/images/logo.png" alt="" class="footer" />
+            </div>
+            <section class="flex flex-col w-full sm:flex-row gap-20 m-10">
+              <div>
+                <h3 class="my-5 text-2xl text-[#33CC33] font-bold footer">
+                  Quick Links
+                </h3>
+                <ul class="footer">
+                  <li class="my-2 text-xl">About Us</li>
+                  <li class="my-2 text-xl">Contact US</li>
+                  <li class="my-2 text-xl">Bike Models</li>
+                  <li class="my-2 text-xl">Gallery</li>
+                  <li class="my-2 text-xl">Blog</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="my-5 text-2xl text-[#33CC33] font-bold footer">
+                  Follow Us
+                </h3>
+                <ul class="footer">
+                  <li class="my-2 text-xl">Faecbook</li>
+                  <li class="my-2 text-xl">Instagram</li>
+                  <li class="my-2 text-xl">Twitter</li>
+                  <li class="my-2 text-xl">Youtube</li>
+                  <li class="my-2 text-xl">LinkedIn</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="my-5 text-2xl text-[#33CC33] font-bold footer">
+                  Stay Updated
+                </h3>
+                <ul class="footer">
+                  <li class="my-2 text-xl">Email Alerts</li>
+                  <li class="my-2 text-xl">New Releases</li>
+                  <li class="my-2 text-xl">Special Offers</li>
+                  <li class="my-2 text-xl">Newsletter</li>
+                  <li class="my-2 text-xl">Latest News</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="w-full sm:w-1/2 h-2/3 flex justify-center items-center">
+          <div class="w-1/2 h-2/5 footer">
+            <h5 class="text-2xl mb-2">Subscribe</h5>
+            <h5>
+              Join our newsletter for the latest bike features and updates.
+            </h5>
+            <div class="w-full flex flex-col sm:flex-row gap-2 mt-5">
+              <input
+                type="text"
+                placeholder="Your Email Here"
+                class="border border-white w-full sm:w-4/5 p-2"
+              />
+              <div class="border border-white w-full sm:w-1/5 p-2">Join</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
